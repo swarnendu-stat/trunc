@@ -15,14 +15,14 @@
 #' ptrunc(a = 0, dist = "norm", q = 1.96, args = list(mean = 10, sd = 10))
 #' ptrunc(a = 2, dist = "binom", q = 6, args = list(size = 10, prob = 0.2))
 #' @export
-ptrunc <- function(a = -Inf, b = Inf, dist = "gompertz", q, args = list("shape" = 1, "rate" = 1), lower.tail = TRUE) {
+ptrunc <- function(a = -Inf, b = Inf, dist = "norm", q, args = list("mean" = 0, "sd" = 1), lower.tail = TRUE) {
   stopifnot("a < b is necessary" = a < b)
-  req_args <- setdiff(names(formals(paste0("r", dist))), "n")
-  extra_arg <- setdiff(names(args), req_args)
-  if (length(extra_arg)) {
-    for (x in extra_arg) { args[[x]] <- NULL }
-    args <- purrr::compact(args)
-  }
+  # req_args <- setdiff(names(formals(paste0("r", dist))), "n")
+  # extra_arg <- setdiff(names(args), req_args)
+  # if (length(extra_arg)) {
+  #   for (x in extra_arg) { args[[x]] <- NULL }
+  #   args <- purrr::compact(args)
+  # }
   F_a <- do.call(what = paste0("p", dist), args = append(list("q" = a, "lower.tail" = TRUE), args))
   F_b <- do.call(what = paste0("p", dist), args = append(list("q" = b, "lower.tail" = TRUE), args))
   q[q<a] <- a

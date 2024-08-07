@@ -4,13 +4,7 @@
 \alias{rtrunc}
 \title{Random truncated generation for any univariate distribution in the namespace}
 \usage{
-rtrunc(
-  n = 1,
-  a = -Inf,
-  b = Inf,
-  dist = "gompertz",
-  args = list(shape = 1, rate = 1)
-)
+rtrunc(n = 1, a = -Inf, b = Inf, dist = "norm", args = list(mean = 0, sd = 1))
 }
 \arguments{
 \item{n}{number of observations. If length(n) > 1, the length is taken to be the number required.}

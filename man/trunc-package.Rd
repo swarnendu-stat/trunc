@@ -4,9 +4,9 @@
 \name{trunc-package}
 \alias{trunc}
 \alias{trunc-package}
-\title{trunc: What the Package Does (Title Case)}
+\title{trunc: Truncated Distribution (Title Case)}
 \description{
-More about what it does (maybe more than one line) Use four spaces when indenting paragraphs within the Description.
+Density, distribution function, quantile function and random generation for truncated version of any distribution in the namespace.
 }
 \author{
 \strong{Maintainer}: swarnendu chatterjee \email{swarnendu.stat@gmail.com}

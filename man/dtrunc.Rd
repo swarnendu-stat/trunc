@@ -4,13 +4,7 @@
 \alias{dtrunc}
 \title{Truncated density generation for any univariate distribution in the namespace}
 \usage{
-dtrunc(
-  a = -Inf,
-  b = Inf,
-  dist = "gompertz",
-  x,
-  args = list(shape = 1, rate = 1)
-)
+dtrunc(a = -Inf, b = Inf, dist = "norm", x, args = list(mean = 0, sd = 1))
 }
 \arguments{
 \item{a}{left-truncation point.}

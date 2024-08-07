@@ -1,0 +1,56 @@
+---
+title: "trunc"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{trunc}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(trunc)
+library(survival)
+library(flexsurv)
+```
+
+Suppose we are fitting a log-logistic distribution to the following time-to-event data:
+
+```{r}
+tte_data <- survival::veteran
+head(tte_data)
+```
+
+We use the `flexsurv` package to do the parametric fitting:
+
+```{r}
+tte_fit <- flexsurv::flexsurvreg(Surv(time = time, event = status) ~ . , data = tte_data, dist = "llogis")
+```
+
+Using the fitted parameters, suppose we want to simulate the event-time for a subject who was censored, i.e., `status = 0`, given that the subject has already survived till the follow-up time. The censored subjects are:
+
+```{r}
+tte_cens_data <- tte_data[tte_data$status==0,]
+```
+
+Let's do the simulation for the first subject from the above `tte_cens_data`. This person has already lived `r tte_cens_data$time[1]` time.
+
+First we derive the parameters of `llogis` distribution corresponding to this person:
+
+```{r}
+tte_cens_covariate_matrix <- model.matrix(~., data = subset(tte_cens_data, select=-c(time, status))[1,])[, -1]
+tte_coef_comb <- tte_cens_covariate_matrix %*% coef(tte_fit)[3:10]
+shape = exp(coef(tte_fit)[1] + tte_coef_comb)
+scale = exp(coef(tte_fit)[2] + tte_coef_comb)
+```
+Then we do the truncated simulation as follows:
+
+```{r}
+rtrunc(n = 1, a = tte_cens_data$time[1], dist = "llogis", args = list(shape = shape, scale = scale))
+```

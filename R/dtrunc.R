@@ -14,16 +14,16 @@
 #' dtrunc(a = 0, dist = "norm", x = 1, args = list(mean = 10, sd = 10))
 #' dtrunc(a = 2, dist = "binom", x = 3, args = list(size = 10, prob = 0.2))
 #' @export
-dtrunc <- function(a = -Inf, b = Inf, dist = "gompertz", x, args = list("shape" = 1, "rate" = 1)) {
+dtrunc <- function(a = -Inf, b = Inf, dist = "norm", x, args = list("mean" = 0, "sd" = 1)) {
   stopifnot("a < b is necessary" = a < b)
   stopifnot("a <= x is necessary" = all(a <= x))
   stopifnot("x <= b is necessary" = all(x <= b))
-  req_args <- setdiff(names(formals(paste0("r", dist))), "n")
-  extra_arg <- setdiff(names(args), req_args)
-  if (length(extra_arg)) {
-    for (x in extra_arg) { args[[x]] <- NULL }
-    args <- purrr::compact(args)
-  }
+  # req_args <- setdiff(names(formals(paste0("r", dist))), "n")
+  # extra_arg <- setdiff(names(args), req_args)
+  # if (length(extra_arg)) {
+  #   for (x in extra_arg) { args[[x]] <- NULL }
+  #   args <- purrr::compact(args)
+  # }
   F_a <- do.call(what = paste0("p", dist), args = append(list("q" = a, "lower.tail" = TRUE), args))
   F_b <- do.call(what = paste0("p", dist), args = append(list("q" = b, "lower.tail" = TRUE), args))
   return(do.call(what = paste0("d", dist), args = append(list("x" = x), args))/(F_b-F_a))

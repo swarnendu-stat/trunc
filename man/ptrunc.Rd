@@ -7,9 +7,9 @@
 ptrunc(
   a = -Inf,
   b = Inf,
-  dist = "gompertz",
+  dist = "norm",
   q,
-  args = list(shape = 1, rate = 1),
+  args = list(mean = 0, sd = 1),
   lower.tail = TRUE
 )
 }

@@ -1,19 +1,23 @@
 Package: trunc
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Truncated Distribution (Title Case)
 Version: 0.1.0
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Density, distribution function, quantile function and random generation for
+    truncated version of any distribution in the namespace.
 License: Apache License (>= 2)
 Encoding: UTF-8
 LazyData: true
 Suggests: 
+    flexsurv,
+    knitr,
+    rmarkdown,
+    survival,
     testthat (>= 3.0.0),
     truncnorm
 Config/testthat/edition: 3
 RoxygenNote: 7.3.1
 Imports: 
-    purrr,
     stats
 Authors@R: 
     person("swarnendu", "chatterjee", , "swarnendu.stat@gmail.com", role = c("aut", "cre"))
+VignetteBuilder: knitr
