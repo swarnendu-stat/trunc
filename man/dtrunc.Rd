@@ -20,8 +20,7 @@ dtrunc(a = -Inf, b = Inf, dist = "norm", x, args = list(mean = 0, sd = 1))
 (e.g., `list(mean = 10, sd = 100)` for `norm`)}
 }
 \value{
-Generates random deviates. The length of the result is determined by n.
-The numerical arguments other than n are recycled to the length of the result.
+Generates density
 }
 \description{
 `dtrunc` generates density for any truncated univariate distribution that is present in the namespace

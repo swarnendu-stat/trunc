@@ -9,7 +9,7 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-The goal of `trunc` is to provide facilitate generating random variate
+The goal of `trunc` is to provide facilitate generating random deviate
 values, distribution function, density function and quantile function
 for uni-variate truncated distributions.
 
@@ -21,7 +21,13 @@ counterpart.
 
 ## Installation
 
-You can install the development version of trunc from
+You can install from CRAN with:
+
+``` r
+install.packages("trunc")
+```
+
+Or you can install the development version of trunc from
 [GitHub](https://github.com/) with:
 
 ``` r
@@ -45,12 +51,12 @@ dtrunc(a = 2, dist = "binom", x = 3, args = list(size = 10, prob = 0.2))
 #> [1] 0.6248488
 ```
 
-Random variate generation:
+Random deviate generation:
 
 ``` r
 rtrunc(n = 10, a = 0, dist = "norm", args = list(mean = 10, sd = 10))
-#>  [1] 19.743483  2.105556 24.997552  9.584659  4.853605 26.271243  6.241677
-#>  [8]  8.873282  8.607515  5.282196
+#>  [1]  8.975498  2.917109  9.985097 27.611930  2.506215 17.192299 19.292416
+#>  [8] 11.076166  9.532736 10.584224
 ```
 
 Distribution function generation:

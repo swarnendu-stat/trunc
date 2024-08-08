@@ -29,7 +29,7 @@ qtrunc(
 \item{lower.tail}{logical; if TRUE (default), probabilities are \eqn{P[X \leq x]} otherwise, \eqn{P[X > x]}.}
 }
 \value{
-gives the distribution function
+generates the quantile function
 }
 \description{
 `qtrunc` generates quantile function for any truncated univariate distribution that is present in the namespace

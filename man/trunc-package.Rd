@@ -6,10 +6,10 @@
 \alias{trunc-package}
 \title{trunc: Truncated Distribution (Title Case)}
 \description{
-The goal of trunc is to provide facilitate generating random variate values, distribution function, density function and quantile function for uni-variate truncated distributions. The underlying distribution can be any distribution that is available in the namespace. For example, gompertz distribution available means that the corresponding rgompertz, dgompertz, pgompertz, qgompertz are available. trunc utilizes these functions to provide their truncated counterpart.
+The goal of trunc is to provide facilitate generating random deviate values, distribution function, density function and quantile function for uni-variate truncated distributions. The underlying distribution can be any distribution that is available in the namespace. For example, gompertz distribution available means that the corresponding rgompertz, dgompertz, pgompertz, qgompertz are available. trunc utilizes these functions to provide their truncated counterpart.
 }
 \author{
-\strong{Maintainer}: swarnendu chatterjee \email{swarnendu.stat@gmail.com}
+\strong{Maintainer}: swarnendu chatterjee \email{swarnendu.stat@gmail.com} [copyright holder]
 
 }
 \keyword{internal}

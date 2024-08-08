@@ -10,7 +10,7 @@
 #' @param args a named list of parameter vectors corresponding to the distribution
 #' (e.g., `list(mean = 10, sd = 100)` for `norm`)
 #' @param lower.tail logical; if TRUE (default), probabilities are \eqn{P[X \leq x]} otherwise, \eqn{P[X > x]}.
-#' @returns gives the distribution function
+#' @returns generates the distribution function
 #' @examples
 #' ptrunc(a = 0, dist = "norm", q = 1.96, args = list(mean = 10, sd = 10))
 #' ptrunc(a = 2, dist = "binom", q = 6, args = list(size = 10, prob = 0.2))

@@ -10,7 +10,7 @@
 #' @param args a named list of parameter vectors corresponding to the distribution
 #' (e.g., `list(mean = 10, sd = 100)` for `norm`)
 #' @param lower.tail logical; if TRUE (default), probabilities are \eqn{P[X \leq x]} otherwise, \eqn{P[X > x]}.
-#' @returns gives the distribution function
+#' @returns generates the quantile function
 #' @examples
 #' qtrunc(a = 0, dist = "norm", p = 0.95, args = list(mean = 10, sd = 10))
 #' qtrunc(a = 2, dist = "binom", p = 0.5, args = list(size = 10, prob = 0.2))

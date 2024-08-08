@@ -8,8 +8,7 @@
 #' @param x vector of quantiles.
 #' @param args a named list of parameter vectors corresponding to the distribution
 #' (e.g., `list(mean = 10, sd = 100)` for `norm`)
-#' @returns Generates random deviates. The length of the result is determined by n.
-#' The numerical arguments other than n are recycled to the length of the result.
+#' @returns Generates density
 #' @examples
 #' dtrunc(a = 0, dist = "norm", x = 1, args = list(mean = 10, sd = 10))
 #' dtrunc(a = 2, dist = "binom", x = 3, args = list(size = 10, prob = 0.2))

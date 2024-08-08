@@ -19,13 +19,19 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-The goal of `trunc` is to provide facilitate generating random variate values, distribution function, density function and quantile function for uni-variate truncated distributions.
+The goal of `trunc` is to provide facilitate generating random deviate values, distribution function, density function and quantile function for uni-variate truncated distributions.
 
 The underlying distribution can be any distribution that is available in the namespace. For example, `gompertz` distribution available means that the corresponding `rgompertz`, `dgompertz`, `pgompertz`, `qgompertz` are available. `trunc` utilizes these functions to provide their truncated counterpart.
 
 ## Installation
 
-You can install the development version of trunc from [GitHub](https://github.com/) with:
+You can install from CRAN with:
+
+```r
+install.packages("trunc")
+```
+
+Or you can install the development version of trunc from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -46,7 +52,7 @@ Density generation:
 dtrunc(a = 2, dist = "binom", x = 3, args = list(size = 10, prob = 0.2))
 ```
 
-Random variate generation:
+Random deviate generation:
 ```{r}
 rtrunc(n = 10, a = 0, dist = "norm", args = list(mean = 10, sd = 10))
 ```
