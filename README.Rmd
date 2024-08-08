@@ -29,7 +29,7 @@ You can install the development version of trunc from [GitHub](https://github.co
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("gsk-tech/trunc")
+devtools::install_github("swarnendu-stat/trunc")
 ```
 
 ## Example

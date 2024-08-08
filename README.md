@@ -26,7 +26,7 @@ You can install the development version of trunc from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("gsk-tech/trunc")
+devtools::install_github("swarnendu-stat/trunc")
 ```
 
 ## Example
@@ -49,8 +49,8 @@ Random variate generation:
 
 ``` r
 rtrunc(n = 10, a = 0, dist = "norm", args = list(mean = 10, sd = 10))
-#>  [1] 18.353789  8.533732  7.740858 16.947373  6.353793 28.342055 16.249025
-#>  [8] 10.436460 10.298640 10.129309
+#>  [1] 19.743483  2.105556 24.997552  9.584659  4.853605 26.271243  6.241677
+#>  [8]  8.873282  8.607515  5.282196
 ```
 
 Distribution function generation:
