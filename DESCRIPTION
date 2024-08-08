@@ -26,3 +26,5 @@ Imports:
 Authors@R: 
     person("swarnendu", "chatterjee", , "swarnendu.stat@gmail.com", role = c("aut", "cre", "cph"))
 VignetteBuilder: knitr
+URL: https://github.com/swarnendu-stat/trunc
+BugReports: https://github.com/swarnendu-stat/trunc/issues
