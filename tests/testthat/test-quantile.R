@@ -4,6 +4,6 @@ test_that("quantile works", {
 })
 
 test_that("quantile matches", {
-  expect_equal(qtrunc(a = -1, b = 0.5, dist = "norm", p = 0.75, args = list(mean = 0, sd = 4)),
-               truncnorm::qtruncnorm(p = 0.75, a = -1, b = 0.5, mean = 0, sd = 4))
+  expect_equal(qtrunc(a = -1, b = 0.5, dist = "norm", p = c(0.25, 0.5, 0.75), args = list(mean = 0, sd = 4)),
+               truncnorm::qtruncnorm(p = c(0.25, 0.5, 0.75), a = -1, b = 0.5, mean = 0, sd = 4))
 })
