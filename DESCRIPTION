@@ -2,8 +2,13 @@ Package: trunc
 Type: Package
 Title: Truncated Distribution (Title Case)
 Version: 0.1.0
-Description: Density, distribution function, quantile function and random generation for
-    truncated version of any distribution in the namespace.
+Description: The goal of trunc is to provide facilitate generating random variate 
+    values, distribution function, density function and quantile function for 
+    uni-variate truncated distributions.
+    The underlying distribution can be any distribution that is available in the 
+    namespace. For example, gompertz distribution available means that the 
+    corresponding rgompertz, dgompertz, pgompertz, qgompertz are available. 
+    trunc utilizes these functions to provide their truncated counterpart.
 License: Apache License (>= 2)
 Encoding: UTF-8
 LazyData: true
