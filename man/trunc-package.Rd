@@ -8,6 +8,14 @@
 \description{
 The goal of trunc is to provide facilitate generating random deviate values, distribution function, density function and quantile function for uni-variate truncated distributions. The underlying distribution can be any distribution that is available in the namespace. For example, gompertz distribution available means that the corresponding rgompertz, dgompertz, pgompertz, qgompertz are available. trunc utilizes these functions to provide their truncated counterpart.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/swarnendu-stat/trunc}
+  \item Report bugs at \url{https://github.com/swarnendu-stat/trunc/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: swarnendu chatterjee \email{swarnendu.stat@gmail.com} [copyright holder]
 
